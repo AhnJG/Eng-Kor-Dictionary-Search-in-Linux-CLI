@@ -1,2 +1,2 @@
-# Kor-Eng-Dictionary-Search-in-Linux-CLI
-This program can be kor-eng dictionary search in linux command line
+# Eng-Kor-Dictionary-Search-in-Linux-CLI
+This program can be Eng-Kor dictionary search in linux command line
