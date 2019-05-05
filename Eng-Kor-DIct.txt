@@ -1,0 +1,16 @@
+  1 if [ $1 ]
+  2 then
+  3     searchterm="$1"
+  4 else
+  5 
+  6     read -p "검색할 영단어를 입력해주세요 : " searchterm
+  7 fi
+  8 
+  9 lynx -dump https://dictionary.cambridge.org/us/dictionary/english-korean/$searchterm | sed -n '/Translation of/,/Translation    s/p' | sed -e 's/[a-z A-Z 0-9]//g' | sed -e 's/[()“”?ⓒ.?’/????‘?"-]//g' | sed -e 's/[!ː··?=??????$]//g' | sed -e 's/\[\]//g'     | sed 's/,/ /g' | sed '/^$/d' > eng_tmp
+ 10 
+ 11 if [ -s ./eng_tmp ]
+ 12 then
+ 13     cat eng_tmp
+ 14 else
+ 15     echo "입력하신 단어가 사전에 존재하지 않습니다."
+ 16 fi
