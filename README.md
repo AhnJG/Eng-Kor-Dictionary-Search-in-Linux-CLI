@@ -13,3 +13,5 @@ This program can Eng-Kor dictionary search in linux command line
 
 4.재부팅 후 파일명 영어단어 의 형식으로 사용하실 수 있습니다.
 
+<img src="프로젝트 결과.PNG">
+
